@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatelessWidget {
-  const ChatScreen({super.key});
+  String userName;
+
+  ChatScreen({super.key, required this.userName});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Chat room for $userName"),
+      ),
+    );
   }
 }
